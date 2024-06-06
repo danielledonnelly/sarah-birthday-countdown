@@ -1,0 +1,17 @@
+body {
+  background-color: lightpink !important; 
+}
+
+.card {
+  background-color: #a848b9 !important; 
+  border-radius: 20px;
+}
+
+#countdown {
+  font-size: 36px;
+  color: #ff86d2; 
+}
+
+h1 {
+  color: #ff86d2;
+}
