@@ -8,8 +8,10 @@ function updateCountdown() {
   const difference = birthdayDate - currentDate;
   
   if (difference <= 0) {
-    // If the countdown is over, display a message
-    document.getElementById('countdown').innerHTML = "Happy Birthday, Sarah!";
+    // If the countdown is over, display a message and start confetti
+    document.getElementById('countdown').style.display = 'none';
+    document.getElementById('message').style.display = 'block';
+    startConfetti();
   } else {
     // Calculate days, hours, minutes, seconds
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
@@ -20,6 +22,14 @@ function updateCountdown() {
     // Display the countdown
     document.getElementById('countdown').innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
   }
+}
+
+// Function to start confetti animation
+function startConfetti() {
+  const confettiContainer = document.getElementById('confetti');
+  confettiContainer.style.display = 'block';
+  // You can use a confetti library like confetti.js to add the confetti effect
+  // Example: confetti.start();
 }
 
 // Update the countdown every second
