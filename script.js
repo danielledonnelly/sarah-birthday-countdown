@@ -2,8 +2,8 @@ let confettiLaunched = false; // Flag to track confetti launch
 
 // Function to update the countdown
 function updateCountdown() {
-  // Set the target date and time (June 7th, 2024, 8:00 PM Newfoundland Time)
-  const targetDate = new Date('2024-06-07T20:00:00-02:30');
+  // Set the target date and time (July 1st, 2024, 00:00:00 France Time)
+  const targetDate = new Date('2024-07-01T00:00:00+02:00');
   const currentDate = new Date();
 
   // Calculate the difference in milliseconds
