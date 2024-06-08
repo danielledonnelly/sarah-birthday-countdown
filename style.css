@@ -16,10 +16,6 @@ h1, h2 {
   color: #ffb3e3;
 }
 
-#message h2 {
-  color: #ba68c8; /* Purple */
-}
-
 #confetti {
   position: fixed;
   top: 0;
