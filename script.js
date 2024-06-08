@@ -1,3 +1,5 @@
+let confettiLaunched = false; // Flag to track confetti launch
+
 // Function to update the countdown
 function updateCountdown() {
   // Set the target date and time (June 7th, 2024, 8:00 PM Newfoundland Time)
@@ -7,12 +9,13 @@ function updateCountdown() {
   // Calculate the difference in milliseconds
   const difference = targetDate - currentDate;
 
-  if (difference <= 0) {
-      // If the countdown is over, display a message and start confetti
+  if (difference <= 0 && !confettiLaunched) {
+      // If the countdown is over and confetti has not been launched, display a message and start confetti
       document.getElementById('countdown').style.display = 'none';
       document.getElementById('message').style.display = 'block';
       startConfetti();
-  } else {
+      confettiLaunched = true; // Set the flag to true to prevent re-launching confetti
+  } else if (difference > 0) {
       // Calculate days, hours, minutes, seconds
       const days = Math.floor(difference / (1000 * 60 * 60 * 24));
       const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
