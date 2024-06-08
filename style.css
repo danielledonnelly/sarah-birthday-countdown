@@ -4,7 +4,6 @@ body {
 
 .card {
   background-color: #a848b9 !important; 
-  border-radius: 20px;
 }
 
 #countdown {
@@ -12,8 +11,14 @@ body {
   color: #ffb3e3; 
 }
 
-h1, h2, p {
+h1, h2 {
   color: #ffb3e3;
+}
+
+p {
+  color: #6c067e;
+  font-size: 20px;
+  text-align: center
 }
 
 #confetti {
